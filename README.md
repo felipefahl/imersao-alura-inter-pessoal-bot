@@ -31,6 +31,8 @@ O InterPessoal-Bot é um assistente virtual especializado em ajudar pessoas a de
 
 ### Demonstração
 
+![Demonstração do InterPessoal-Bot](assets/demo.gif)
+
 ### Autor
 
 [Felipe Nicolau](https://github.com/felipefahl)
