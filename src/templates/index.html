@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InterPessoal-Bot | Desenvolvimento de Habilidades Interpessoais</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>InterPessoal-Bot</h1>
+            <p class="subtitle">Seu assistente para desenvolvimento de habilidades interpessoais</p>
+        </header>
+
+        <div class="features">
+            <div class="feature-card">
+                <div class="icon">📊</div>
+                <h3>Análise de Conflitos</h3>
+                <p>Receba orientações para resolver situações de conflito de forma construtiva</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">💬</div>
+                <h3>Comunicação Assertiva</h3>
+                <p>Aprenda a expressar suas ideias e sentimentos de forma clara e respeitosa</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">🎭</div>
+                <h3>Simulação de Conversas</h3>
+                <p>Pratique diálogos difíceis em um ambiente seguro</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">🔍</div>
+                <h3>Identificação de Padrões</h3>
+                <p>Descubra padrões de comunicação problemáticos e como melhorá-los</p>
+            </div>
+        </div>
+
+        <main>
+            <div class="chat-container">
+                <div class="rate-limit-info" id="rateLimitInfo">
+                    <strong>Aviso:</strong> Este chatbot utiliza a versão gratuita da API Gemini, que possui limites de
+                    requisições.
+                    Se você encontrar erros de "limite excedido", aguarde alguns segundos antes de tentar novamente.
+                </div>                <div class="chat-box" id="chatBox">
+                    <div class="message bot">
+                        <p>👋 <strong>Olá! Sou o InterPessoal-Bot</strong>, seu assistente para desenvolvimento de habilidades interpessoais.</p>
+                        <br>
+                        <p>Posso ajudar você com:</p>
+                        <br>
+                        <p>• Análise de situações de conflito<br>
+                        • Comunicação assertiva<br>
+                        • Simulação de conversas difíceis<br>
+                        • Identificação de padrões de comunicação<br>
+                        • Insights baseados em psicologia social</p>
+                        <br>
+                        <p>Como posso ajudá-lo hoje?</p>
+                    </div>
+                </div>
+
+                <div class="input-area">
+                    <textarea id="userInput"
+                        placeholder="Descreva uma situação, faça uma pergunta ou peça ajuda..."></textarea>
+                    <div class="button-group">
+                        <button id="resetBtn" class="reset-btn">Reiniciar Conversa</button>
+                        <button id="sendBtn" class="send-btn">Enviar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="suggestions">
+                <h3>Sugestões de perguntas:</h3>
+                <ul>
+                    <li><button class="suggestion-btn">Como posso comunicar feedback negativo de forma
+                            construtiva?</button></li>
+                    <li><button class="suggestion-btn">Ajude-me a preparar para uma conversa difícil com meu
+                            chefe</button></li>
+                    <li><button class="suggestion-btn">Como lidar com um colega que sempre interrompe nas
+                            reuniões?</button></li>
+                    <li><button class="suggestion-btn">Quais são os princípios da comunicação não-violenta?</button>
+                    </li>
+                </ul>
+            </div>
+        </main>
+
+        <footer>
+            <p>Desenvolvido por Felipe Nicolau para a Imersão IA 2025 da Alura</p>
+            <div class="social-links">
+                <a href="https://github.com/seu-usuario/InterPessoal-Bot" target="_blank">GitHub</a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+
+</html>
